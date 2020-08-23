@@ -9,10 +9,10 @@ describe("App component", () => {
     const title = wrapper.find('h1').text();
     expect(title).toBe('ToDo App');
   });
-  
+
   it('TodoList component is rendered', () => {
     const wrapper = shallow(<App />);
-    const counter = wrapper.find(TodoList).exists();
-    expect(counter).toBe(true);
+    const todoList = wrapper.find(TodoList).exists();
+    expect(todoList).toBe(true);
   })
 })

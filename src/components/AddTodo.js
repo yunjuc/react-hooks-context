@@ -2,20 +2,21 @@ import React, { useState } from 'react'
 import { Button } from 'antd'
 
 function AddTodo({ addTodo }) {
-  const[text, setText] = useState('')
+  const[title, setTitle] = useState('')
 
   const handleChange = (e) => {
-    setText(e.target.value)
+    setTitle(e.target.value)
   }
 
-  const handleClick = () => {
-    addTodo(text)
-    setText('')
+  const handleClick = (e) => {
+    e.preventDefault()
+    addTodo(title)
+    setTitle('')
   }
 
   return (
     <div className="inputbar">
-      <input type="text" onChange={handleChange} value={text} placeholder="Add todo item"></input>
+      <input type="text" onChange={handleChange} value={title} placeholder="Add todo item" required></input>
       <Button type="primary" onClick={handleClick}>Add</Button>
     </div>
   )
