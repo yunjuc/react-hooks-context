@@ -15,5 +15,4 @@ describe("App component", () => {
     const counter = wrapper.find(TodoList).exists();
     expect(counter).toBe(true);
   })
-
 })
