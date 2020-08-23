@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import { Button } from 'antd'
 
 function Todo(props) {
-  const { id, complete, text, removeTodo } = props
-  const [status, setStatus] = useState(complete)
+  const { todo, removeTodo } = props
+  const [status, setStatus] = useState(todo.complete)
 
-  const getStyle = () => {
+  const style = () => {
     return (
       { textDecoration: status ? "line-through" : "none" }
     )
@@ -17,9 +17,9 @@ function Todo(props) {
 
   return (
     <div className="item">
-      <input type="checkbox" onChange={handleChange} defaultChecked={complete}>
-      </input><p style={getStyle()}>{text}</p>
-      <Button type="default" onClick={() => removeTodo(id)}>Delete</Button>
+      <input type="checkbox" onChange={handleChange} defaultChecked={todo.complete}>
+      </input><p style={style()}>{todo.text}</p>
+    <Button type="default" onClick={() => removeTodo(todo.id)}>Delete</Button>
     </div>
   )
 }
