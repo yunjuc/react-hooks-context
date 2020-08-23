@@ -3,29 +3,31 @@ import data from '../data'
 import AddTodo from './AddTodo'
 import Todo from './Todo'
 
-localStorage.setItem('todos', JSON.stringify(data))
+//use localstorage to save and load data
+let todoData
+if (localStorage.getItem('todos')) {
+  todoData = JSON.parse(localStorage.getItem('todos'))
+} else {
+  todoData = data
+}
 
 function TodoList() {
-  const [todos, setTodos] = useState(
-    JSON.parse(localStorage.getItem('todos'))
-  )
+  const [todos, setTodos] = useState(todoData)
 
   const removeTodo = (id) => {
     const obj = todos.filter(el => el.id !== id)
     setTodos(obj)
-    localStorage.setItem('todos', JSON.stringify(todos))
   }
 
   const addTodo = (text) => {
     const id = todos.length === 0 ? 1 : todos[todos.length-1].id + 1
     const obj = {'id': id, 'text':text, 'complete': false}
     setTodos([...todos, obj])
-    localStorage.setItem('todos', JSON.stringify(todos))
   }
 
-  // useEffect(() => {
-  //   localStorage.setItem('todos', JSON.stringify(todos))
-  // }, [todos])
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos))
+  }, [todos])
 
   return (
     <div>
