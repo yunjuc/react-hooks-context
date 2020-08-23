@@ -1,15 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import data from '../data'
+import todoData from '../data'
 import AddTodo from './AddTodo'
 import Todo from './Todo'
-
-//use localstorage to save and load data
-let todoData
-if (localStorage.getItem('todos')) {
-  todoData = JSON.parse(localStorage.getItem('todos'))
-} else {
-  todoData = data
-}
 
 function TodoList() {
   const [todos, setTodos] = useState(todoData)
