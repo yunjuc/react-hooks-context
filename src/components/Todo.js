@@ -3,7 +3,7 @@ import { Button } from 'antd'
 import { TodoContext } from '../contexts/TodoContext'
 
 function Todo(props) {
-  const { id, complete, text } = props
+  const { id, complete, text } = props.todo
   const { removeTodo } = useContext(TodoContext)
   const [status, setStatus] = useState(complete)
 

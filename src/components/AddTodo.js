@@ -1,5 +1,4 @@
 import React, { useState, useContext } from 'react'
-import { Button } from 'antd'
 import { TodoContext } from '../contexts/TodoContext'
 
 function AddTodo() {
@@ -10,16 +9,17 @@ function AddTodo() {
     setText(e.target.value)
   }
 
-  const handleClick = () => {
+  const handleClick = (e) => {
+    e.preventDefault()
     addTodo(text)
     setText('')
   }
 
   return (
-    <div className="inputbar">
-      <input type="text" onChange={handleChange} value={text} placeholder="Add todo item"></input>
-      <Button type="primary" onClick={handleClick}>Add</Button>
-    </div>
+    <form className="inputbar" onSubmit={handleClick}>
+      <input type="text" onChange={handleChange} value={text} placeholder="Add todo item" required></input>
+      <button type="submit">Add</button>
+    </form>
   )
 }
 

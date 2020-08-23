@@ -10,8 +10,8 @@ function TodoList() {
     <div>
       <AddTodo/>
       <div className="listContainer">
-        {todos.map(item => (
-          <Todo key={item.id} id={item.id} text={item.text} complete={item.complete}/>
+        {todos.map(todo => (
+          <Todo key={todo.id} todo={todo} />
           ))
         }
       </div>

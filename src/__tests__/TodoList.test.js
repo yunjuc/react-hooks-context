@@ -7,13 +7,13 @@ import Todo from '../components/Todo'
 describe("TodoList component", () => {
   it('AddTodo component is rendered', () => {
     const wrapper = shallow(<TodoList />).dive();
-    const counter = wrapper.find(AddTodo).exists();
-    expect(counter).toBe(true);
+    const addTodo = wrapper.find(AddTodo).exists();
+    expect(addTodo).toBe(true);
   })
 
   it('Todo component is rendered', () => {
     const wrapper = shallow(<TodoList />);
-    const counter = wrapper.find(Todo).exists();
-    expect(counter).toBe(true);
+    const todo = wrapper.find(Todo).exists();
+    expect(todo).toBe(true);
   })
 })
