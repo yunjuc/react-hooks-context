@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-//import data from '../data'
+import React, { useState, useEffect } from 'react'
 import AddTodo from './AddTodo'
 import Todo from './Todo'
 import axios from 'axios'
@@ -7,14 +6,18 @@ import axios from 'axios'
 function TodoList() {
   const [todos, setTodos] = useState([])
 
-  axios.get('https://jsonplaceholder.typicode.com/todos?_limit=10')
-    .then(res => setTodos(res.data))
-    .catch(err => console.log(err))
+  useEffect(() => {
+    axios.get('https://jsonplaceholder.typicode.com/todos?_limit=10')
+      .then(res => setTodos(res.data))
+  }, [])
+
+  // const removeTodo = (id) => {
+  //   axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
+  //     .then(setTodos(todos.filter(el => el.id !== id)))
+  // }
 
   const removeTodo = (id) => {
-    axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
-      .then(setTodos(todos.filter(el => el.id !== id)))
-      .catch(err => console.log(err))
+    setTodos(todos.filter(el => el.id !== id))
   }
 
   const addTodo = (title) => {

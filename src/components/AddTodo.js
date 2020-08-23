@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Button } from 'antd'
 
 function AddTodo({ addTodo }) {
   const[title, setTitle] = useState('')
@@ -8,17 +7,17 @@ function AddTodo({ addTodo }) {
     setTitle(e.target.value)
   }
 
-  const handleClick = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault()
     addTodo(title)
     setTitle('')
   }
 
   return (
-    <div className="inputbar">
+    <form className="inputbar" onSubmit={handleSubmit}>
       <input type="text" onChange={handleChange} value={title} placeholder="Add todo item" required></input>
-      <Button type="primary" onClick={handleClick}>Add</Button>
-    </div>
+      <button type="submit">Add</button>
+    </form>
   )
 }
 
