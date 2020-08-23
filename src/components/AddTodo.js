@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { Button } from 'antd'
+import { TodoContext } from '../contexts/TodoContext'
 
-function AddTodo({ addTodo }) {
+function AddTodo() {
+  const { addTodo } = useContext(TodoContext)
   const[text, setText] = useState('')
 
   const handleChange = (e) => {
