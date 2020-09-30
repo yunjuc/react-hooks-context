@@ -1,14 +1,16 @@
 # React Hooks & Context API
 
-The purpose of this project is to create a React app using Hooks and Context API. The app is created with [Create React App](https://github.com/facebook/create-react-app). The unit testing is set up with [Jest](https://jestjs.io/) and [Enzyme](https://enzymejs.github.io/enzyme/).
+The purpose of this project is to create a React app using Hooks and Context API. The app is created with [Create React App](https://github.com/facebook/create-react-app). The unit testing is set up with [Jest](https://jestjs.io/) and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro).
 
-## Available Scripts
+## Usage
 
-`yarn start`
+Start the app in the development mode.
+```
+yarn start
+```
+The app will be running on [http://localhost:3000](http://localhost:3000).
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-`yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
+Launche the test runner in the interactive watch mode.
+```
+yarn test
+```

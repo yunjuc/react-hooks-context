@@ -1,5 +1,4 @@
 import React from 'react'
-import 'antd/dist/antd.css'
 import TodoList from './components/TodoList'
 import { TodoContextProvider } from './contexts/TodoContext'
 

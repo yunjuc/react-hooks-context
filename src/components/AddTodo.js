@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react'
 import { TodoContext } from '../contexts/TodoContext'
+import { Button, Input } from '@material-ui/core'
 
 function AddTodo() {
   const { addTodo } = useContext(TodoContext)
@@ -16,9 +17,9 @@ function AddTodo() {
   }
 
   return (
-    <form className="inputbar" onSubmit={handleSubmit}>
-      <input type="text" onChange={handleChange} value={title} placeholder="Add todo item" required></input>
-      <button type="submit">Add</button>
+    <form onSubmit={handleSubmit}>
+      <Input type="text" onChange={handleChange} value={title} placeholder="Add todo item" required></Input>
+      <Button id="add" variant="contained" color="primary" type="submit">Add</Button>
     </form>
   )
 }

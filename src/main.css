@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #F2F2F2;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  text-align: center;
+}
+
+.MuiInput-underline {
+  width: 70%;
+}
+
+#add {
+  margin-left: 1em;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.todo-item {
+  display: flex;
+  margin: 2em;
+  padding: 10px;
+  align-items: center;
+}
+
+.todo-item > .MuiSvgIcon-root {
+  margin-left: auto;
+}
+
+@media only screen and (max-width: 850px) {
+  .MuiInput-underline {
+    width: auto;
+  }
+
+  .todo-container {
+    width: 100%;
+  }
+}

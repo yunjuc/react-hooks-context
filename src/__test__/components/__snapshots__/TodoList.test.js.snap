@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoList component TodoList component is rendered 1`] = `
+<div>
+  <div
+    class="todo-container"
+  >
+    <form>
+      <div
+        class="MuiInputBase-root MuiInput-root MuiInput-underline"
+        required=""
+      >
+        <input
+          class="MuiInputBase-input MuiInput-input"
+          placeholder="Add todo item"
+          required=""
+          type="text"
+          value=""
+        />
+      </div>
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+        id="add"
+        tabindex="0"
+        type="submit"
+      >
+        <span
+          class="MuiButton-label"
+        >
+          Add
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </button>
+    </form>
+    <div
+      class="MuiGrid-root"
+    >
+      <div
+        class="MuiPaper-root todo-item MuiPaper-elevation1 MuiPaper-rounded"
+      >
+        <input
+          type="checkbox"
+        />
+        <p
+          style="text-decoration: none;"
+        >
+          hello
+        </p>
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+          />
+        </svg>
+      </div>
+      <div
+        class="MuiPaper-root todo-item MuiPaper-elevation1 MuiPaper-rounded"
+      >
+        <input
+          type="checkbox"
+        />
+        <p
+          style="text-decoration: none;"
+        >
+          world
+        </p>
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+`;
