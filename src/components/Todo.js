@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import { useState, useContext } from 'react'
 import { TodoContext } from '../contexts/TodoContext'
 import { Paper } from '@material-ui/core'
 import HighlightOffIcon from '@material-ui/icons/HighlightOff'

@@ -1,15 +1,34 @@
-# React Hooks & Context API
+# Next.js + Jest
 
-The purpose of this project is to create a React app using Hooks and Context API. The app is created with [Create React App](https://reactjs.org/docs/create-a-new-react-app.html). The unit test is set up with [Jest](https://jestjs.io/) and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro).
+The purpose of the project is to create a React boilerplate app using Next.js and Jest. The app is created with [Next.js](https://nextjs.org/) and [Material-UI](https://material-ui.com/). The unit test is set up with [Jest](https://jestjs.io/) and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro).
 
 ## Usage
-To use the app, clone this repository and run:<br/>
-`npm install` or `yarn install`
+*Note: You should have [Yarn](https://classic.yarnpkg.com/en/) installed in your computer before moving to the next step.*
 
-Once the setup is complete, you can start the app by running:<br/>
-`npm start` or `yarn start`
+First, clone the repo and install node modules.
+```
+git clone https://github.com/yunjuc/react-hooks-context.git
+cd react-hooks-context
+yarn install
+```
 
-The app will be running in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Run the app in development mode.
+```
+yarn dev
+```
+Open [http://localhost:3000](http://localhost:3000) to see the result in the browser.
 
-To start the test runner, run:<br/>
-`npm test` or `yarn test`
+Build the app for production.
+```
+yarn build
+```
+
+Run the built app in production mode.
+```
+yarn start
+```
+
+Start test runner.
+```
+yarn test
+```

@@ -1,4 +1,3 @@
-import React from 'react'
 import { TodoContext } from '../../contexts/TodoContext'
 import { render, fireEvent, screen } from '@testing-library/react'
 import axios from 'axios'
